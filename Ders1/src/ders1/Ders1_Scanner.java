@@ -1,5 +1,5 @@
 package ders1;
-
+/**
 import java.util.Scanner;
 
 public class Ders1_Scanner {
@@ -25,3 +25,4 @@ public class Ders1_Scanner {
 	}
 
 }
+**/
