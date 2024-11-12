@@ -14,6 +14,9 @@ public class Akademisyen extends Calisan implements Devlet{
 	protected void DerseGir() {
 		System.out.println(getGorev() + " " + getDersler() + " " + getAdSoyad() + " dersine girdi...");
 	}
+	public void Giris() { // Override islemi
+		System.out.println(getGorev()+ " " + getAdSoyad() + " giris yapti...");
+	}
 	protected String getBolum() {
 		return bolum;
 	}
