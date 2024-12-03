@@ -13,7 +13,7 @@ public class DosyaioOrnek {
 	public static void main(String[] args) throws IOException {
 		File f = new File("C:\\Users\\melih\\Desktop\\dosya.csv");
 		
-		Scanner input = new Scanner(System.in);
+		
 		
 		if(!f.exists()) {
 			f.createNewFile();
@@ -28,16 +28,17 @@ public class DosyaioOrnek {
 		bWriter.write("Safa;Emin\n");
 		bWriter.close(); //writer'ı kapatman gerekki while icine girsin
 		
-		Scanner s = new Scanner(f);
+		Scanner input = new Scanner(System.in);
 		System.out.println("Lutfen isim soyad giriniz...\n");
 		String control = input.nextLine();
-
+		
+		Scanner s = new Scanner(f);
 		while(s.hasNextLine()) {
 			String satir = s.nextLine();
 			String[] split = satir.split(";");
 			String fullname = split[0] + " " + split[1];
 
-			if(control.equalsIgnoreCase(fullname)) {
+			if(control.equalsIgnoreCase(fullname)) { //fullname ile control'u buyuk ya da kucuk harf ayirmaksizin kontrol ediyor ve dogruysa giriyoruz
 				System.out.println("Basarili giris...\n");
 				return;
 			}
@@ -50,5 +51,6 @@ public class DosyaioOrnek {
 		fWriter.close();
 		input.close();
 		s.close();
+		input.close();
 	}
 }
